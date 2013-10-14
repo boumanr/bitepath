@@ -20,6 +20,7 @@ git remote add origin https://github.com/boumanr/bitepath.git //git add remote
 git push -u origin master //git push
 
 
+
 /////////////////////////MONGO/////////////////////////
 ./mongod //start mongo
 mongo ip:port //connect to mongo
