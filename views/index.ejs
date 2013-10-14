@@ -1,0 +1,28 @@
+<html>
+<head>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+</head>
+<body>
+
+<form>
+   <input type="button" id="enter" value="GET Dish.findAll via REST/JSON">
+</form>
+
+</body> 
+    <script type="text/javascript">
+    $('#enter').click(function(){  
+        $.ajax({ 
+            url: '/dish',
+            type: 'GET',
+            cache: false, 
+            //data: { field1: 1, field2: 2 }, 
+            success: function(data){
+                alert('Success!')
+            }
+            , error: function(jqXHR, textStatus, err){
+            alert('text status '+textStatus+', err '+err)
+            }
+        })
+    });            
+    </script>
+</html>
