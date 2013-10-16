@@ -20,7 +20,6 @@ git remote add origin https://github.com/boumanr/bitepath.git //git add remote
 git push -u origin master //git push
 
 
-
 /////////////////////////MONGO/////////////////////////
 ./mongod //start mongo
 mongo ip:port //connect to mongo
@@ -31,3 +30,7 @@ db.venue.drop() //drop collection
 
 
 /////////////////////////HEROKU/////////////////////////
+mongo ds049858.mongolab.com:49858/heroku_app18705300 -u 'uid' -p 'pwd' //remote mongodb on Heroku
+db.venue.insert({type: "venue test"}) //insert document in collection
+db.venue.find({type: "venue test2"}) //show document in collection
+

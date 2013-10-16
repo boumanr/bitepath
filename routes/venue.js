@@ -1,6 +1,9 @@
 var mongo = require('mongodb');
 var Server = mongo.Server, Db = mongo.Db, BSON = mongo.BSONPure;
-var db = new Db('bitepathdb', new Server('localhost', 27017), {w:1})
+var host = 'mongodb://boumanr@gmail.com:070783rb@ds049858.mongolab.com:49858/heroku_app18705300';
+
+//var db = new Db('bitepathdb', new Server('localhost', 27017), {w:1}) //localhost
+var db = new Db('heroku_app18705300', new Server(host, 49858), {w:1})
 
 db.open(function(err, db) {
     if(!err) {

@@ -1,5 +1,6 @@
 var mongo = require('mongodb');
 var Server = mongo.Server, Db = mongo.Db, BSON = mongo.BSONPure;
+//var db = new Db('bitepathdb', new Server('localhost', 27017), {w:1})
 var db = new Db('bitepathdb', new Server('localhost', 27017), {w:1})
 
 db.open(function(err, db) {
